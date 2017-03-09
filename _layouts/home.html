@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Tips</h1>
+
+  {{ content }}
+
+  <ul class="post-list">
+    {% for tip in site.tips %}
+      <li>
+        <h2>
+          {{ tip.title | escape }}
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
