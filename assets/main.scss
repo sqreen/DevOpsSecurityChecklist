@@ -1,39 +1,29 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
+
+//
+//  ___  __ _ _ __ ___  ___ _ __
+// / __|/ _` | '__/ _ \/ _ \ '_ \
+// \__ \ (_| | | |  __/  __/ | | |
+// |___/\__, |_|  \___|\___|_| |_|
+//           |_|
+//
+
 @charset "utf-8";
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// Design
+@import "design/_reset";
+@import "design/_colors";
+@import "design/_font";
+@import "design/_mixin";
+@import "design/_title";
 
-$spacing-unit:     30px;
+//Pages
+@import "pages/layout";
+@import "pages/home";
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-
-// Import partials from the `minima` theme.
-@import "minima";
+// Elements
+@import "elements/github-corner";
+@import "elements/footer";

@@ -17,7 +17,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-feed (0.9.1)
+    jekyll-feed (0.9.2)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -44,11 +44,11 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.4.1)
-  jekyll-feed (~> 0.6)
+  jekyll-feed
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.2.6p396
 
 BUNDLED WITH
    1.14.6
