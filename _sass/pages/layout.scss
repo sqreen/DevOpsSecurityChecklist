@@ -4,7 +4,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
   text-rendering: optimizeLegibility;
-  font-family: "BG regular", sans-serif;
+  font-family: "filson-soft", sans-serif;
   background-color: $white;
   position: relative;
 }
@@ -13,10 +13,10 @@ html, body {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 960px;
+  max-width: 1060px;
   position: relative;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1000px) {
     display: block;
     margin: 0 auto;
     width: 100%;

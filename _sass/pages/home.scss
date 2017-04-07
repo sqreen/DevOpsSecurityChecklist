@@ -1,4 +1,5 @@
 // General typo
+
 *::selection {
   background-color: $violet;
   color: $white;
@@ -9,7 +10,9 @@
   top: 0;
   left: calc((100vw/2) - (960px/2));
   padding-left: 20px;
-  width: 190px;
+  width: 220px;
+  height: 100%;
+  box-shadow: 1px 0 0 0 rgba(209, 209, 209, 0.5);
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -19,11 +22,12 @@
   }
 }
 
-.col-9 {
+.main-content {
   padding-right: 20px;
+  width: 69%;
 
   @media screen and (max-width: 960px) {
-  	padding-right: 0;
+    padding-right: 0;
   }
 }
 
@@ -34,14 +38,13 @@
   display: none;
   padding: 10px;
   cursor: pointer;
-
   @media screen and (max-width: 960px) {
     display: block;
   }
 }
 
 .logo {
-  margin: 13vh 0 7.5vh;
+  margin: 100px 0 7.5vh;
 
   @media screen and (max-width: 960px) {
     width: 50px;
@@ -50,112 +53,92 @@
 }
 
 .description {
-  font-family: "BG regular", sans-serif;
-  font-size: rem-calc(28px);
-  line-height: 1.3;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: rem-calc(17px);
+  line-height: 1.85;
   color: $grey;
-
   @media screen and (max-width: 960px) {
     margin: 30px auto;
     font-size: rem-calc(20px);
-	  line-height: 1.4;
+    line-height: 1.4;
     margin-top: 0;
   }
 }
 
 .filter-bar {
-  margin: 40px 0;
+  margin: 46px 0 40px;
 
   h3 {
-    margin-right: 20px;
+    margin-right: 17px;
     display: inline-block;
   }
 
-  ul {
+  .select-block {
     display: inline-block;
     position: relative;
-
-    &::after {
-      content: "";
-      width: 80px;
-      background-color: $violet;
-      border-radius: 50px;
-      height: 30px;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 5px;
-      z-index: 10;
-      transition: .2s ease-in-out;
-    }
+    border-radius: 2px;
+    background: linear-gradient(99deg, #ff5858, #f09819);
 
     &.selected-one {
-      li:nth-child(1) {
-        color: $white;
-
-        &:hover {
-          color: $white;
-        }
+      .progress-bar {
+        width: 221px;
       }
 
-      &::after {
-        width: 62px;
+      .seriesb, .post-seriesb {
+        color: $grey;
+      }
+
+      .post-seriesb {
+        border-left: 1px solid #e5e5e5;
       }
     }
 
     &.selected-two {
-      li:nth-child(1),
-      li:nth-child(2) {
-        color: $white;
-
-        &:hover {
-          color: $white;
-        }
+      .progress-bar {
+        width: 130px;
       }
 
-      &::after {
-        width: 135px;
+      .post-seriesb {
+        color: $grey;
       }
     }
 
     &.selected-three {
-      li {
-        color: $white;
-
-        &:hover {
-          color: $white;
-        }
-      }
-
-      &::after {
-        width: 243px;
+      .progress-bar {
+        width: 0;
       }
     }
 
-    li {
-      font-family: "BG bold", sans-serif;
-    	font-size: rem-calc(16px);
-    	color: $grey-light;
-      display: inline-block;
-      padding: 7px 5px;
-      margin: 0 5px;
-      transition: .2s ease;
-      cursor: pointer;
-      text-align: center;
-      z-index: 20;
+    ul {
       position: relative;
+      z-index: 10;
 
-      &:first-child {
-        padding-left: 15px;
+      li {
+        font-family: "filson-soft", sans-serif;
+        font-size: rem-calc(16px);
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.5;
+        letter-spacing: normal;
+        color: $white;
+        display: inline-block;
+        padding: 0 13px;
+        transition: 0.2s ease;
+        cursor: pointer;
+        text-align: center;
+        z-index: 20;
+        position: relative;
       }
+    }
 
-      &:last-child {
-        padding-right: 20px;
-      }
-
-      &:hover {
-        color: $violet;
-      }
+    .progress-bar {
+      position: absolute;
+      z-index: 5;
+      right: 0;
+      top: 0;
+      height: 100%;
+      background-color: #f6f6f6;
     }
   }
 
@@ -186,20 +169,19 @@ nav {
 
     a {
       font-family: "BG bold", sans-serif;
-    	font-size: rem-calc(19px);
-    	line-height: 1.9;
-    	letter-spacing: 0.1px;
-    	color: $grey-light;
+      font-size: rem-calc(19px);
+      line-height: 1.9;
+      letter-spacing: 0.1px;
+      color: $grey-light;
       display: inline-block;
       text-decoration: none;
-      transition: .2s ease;
+      transition: 0.2s ease;
 
       &:hover {
         color: $violet;
       }
     }
   }
-
   @media screen and (max-width: 960px) {
     display: none;
   }
@@ -223,7 +205,7 @@ nav {
       svg {
         path {
           fill: #C9C9C9;
-          transition: .2s ease;
+          transition: 0.2s ease;
         }
       }
 
@@ -232,7 +214,6 @@ nav {
       }
     }
   }
-
   @media screen and (max-width: 960px) {
     display: none;
   }
@@ -257,7 +238,7 @@ nav {
 
     .header {
       background-color: $white;
-      box-shadow: inset 0px -1px 0px $grey-lighter;
+      box-shadow: inset 0 -1px 0 $grey-lighter;
       font-size: 0;
 
       &:hover {
@@ -296,12 +277,12 @@ nav {
           path {
             stroke-dasharray: 50;
             stroke-dashoffset: 50;
-            transition: .2s ease;
+            transition: 0.2s ease;
           }
 
           circle {
             stroke: $grey-lighter;
-            transition: .2s ease;
+            transition: 0.2s ease;
           }
         }
       }
@@ -320,11 +301,11 @@ nav {
 
         p {
           font-family: "BG medium", sans-serif;
-        	font-size: rem-calc(21px);
-        	line-height: 1;
-        	color: $black;
+          font-size: rem-calc(21px);
+          line-height: 1;
+          color: $black;
           display: inline;
-          transition: .2s ease;
+          transition: 0.2s ease;
           margin-right: 5px;
         }
 
@@ -348,7 +329,7 @@ nav {
         .arrow {
           display: inline-block;
           vertical-align: middle;
-          transition: .2s ease;
+          transition: 0.2s ease;
         }
       }
     }
@@ -357,28 +338,28 @@ nav {
       background-color: $grey-lighter2;
       padding: 31px 33px;
       display: none;
-      box-shadow: inset 0px -1px 0px $grey-lighter;
+      box-shadow: inset 0 -1px 0 $grey-lighter;
 
       p {
         font-family: "BG regular", sans-serif;
-      	font-size: rem-calc(20px);
-      	line-height: 1.4;
-      	color: $grey;
+        font-size: rem-calc(20px);
+        line-height: 1.4;
+        color: $grey;
         display: block;
         margin-bottom: 15px;
 
-        a {
-          word-break: normal !important;
-        }
+        // a {
+        //   word-break: normal !important;
+        // }
       }
 
       a {
         font-family: "BG medium", sans-serif;
-      	font-size: rem-calc(21px);
-      	line-height: 1.4;
-      	color: $violet;
+        font-size: rem-calc(21px);
+        line-height: 1.4;
+        color: $violet;
         text-decoration: none;
-        word-break: break-all;
+        word-break: break-word;
 
         &:hover {
           text-decoration: underline;
@@ -390,12 +371,12 @@ nav {
         text-align: left;
 
         p {
-        	font-size: rem-calc(17px);
+          font-size: rem-calc(17px);
           margin-bottom: 10px;
         }
 
         a {
-        	font-size: rem-calc(17px);
+          font-size: rem-calc(17px);
         }
       }
     }
@@ -407,19 +388,22 @@ nav {
 
   .subtitle {
     font-family: "BG regular", sans-serif;
-  	font-size: rem-calc(18px);
-  	line-height: 2;
-  	color: $grey-light;
+    font-size: rem-calc(18px);
+    line-height: 2;
+    color: $grey-light;
     margin-bottom: 10px;
   }
 
   #mc_embed_signup {
     font-size: 0;
+
     label {
       display: none;
     }
 
-    .mc-field-group, #mc-embedded-subscribe, .clear {
+    #mc-embedded-subscribe,
+    .clear,
+    .mc-field-group {
       display: inline-block;
       vertical-align: middle;
     }
@@ -431,8 +415,8 @@ nav {
 
     #mce-EMAIL {
       font-family: "BG medium", sans-serif;
-    	font-size: rem-calc(16px);
-    	background-color: $grey-lighter;
+      font-size: rem-calc(16px);
+      background-color: $grey-lighter;
       border: none;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
@@ -444,10 +428,10 @@ nav {
     }
 
     #mc-embedded-subscribe {
-	    background-color: $violet;
+      background-color: $violet;
       font-family: "BG bold";
-    	font-size: rem-calc(12px);
-    	color: $white;
+      font-size: rem-calc(12px);
+      color: $white;
       text-transform: uppercase;
       border: none;
       border-top-right-radius: 4px;
@@ -456,14 +440,13 @@ nav {
       position: relative;
       height: 39px;
       cursor: pointer;
-      transition: .2s ease;
+      transition: 0.2s ease;
 
       &:hover {
         background-color: lighten($violet, 5%);
       }
     }
   }
-
   @media screen and (max-width: 960px) {
     display: none;
   }
@@ -474,9 +457,9 @@ nav {
 
   span {
     font-family: "BG regular";
-  	font-size: rem-calc(16px);
-  	letter-spacing: -0.5px;
-  	color: #c8c8c8;
+    font-size: rem-calc(16px);
+    letter-spacing: -0.5px;
+    color: #c8c8c8;
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
@@ -500,19 +483,17 @@ nav {
   text-align: center;
   overflow: auto;
   opacity: 0;
-  transition: .2s ease;
-
+  transition: 0.2s ease;
   @supports ( clip-path: fill-box ) {
     clip-path: circle(0px at 57px 55px);
-    transition: clip-path .4s ease, opacity .5s ease;
+    transition: clip-path 0.4s ease, opacity 0.5s ease;
   }
 
   &.open {
     opacity: 1;
-
     @supports ( clip-path: fill-box ) {
       clip-path: circle(0px at 57px 55px);
-      transition: clip-path .4s ease, opacity .5s ease;
+      transition: clip-path 0.4s ease, opacity 0.5s ease;
     }
   }
 
@@ -530,14 +511,14 @@ nav {
     li {
       text-align: center;
       font-family: "BG bold";
-    	font-size: rem-calc(19px);
-    	line-height: 2.6;
-    	letter-spacing: 0.1px;
-    	text-align: center;
+      font-size: rem-calc(19px);
+      line-height: 2.6;
+      letter-spacing: 0.1px;
+      text-align: center;
 
       a {
         color: $white;
-        text-decoration: none
+        text-decoration: none;
       }
     }
   }
@@ -546,8 +527,8 @@ nav {
     display: block;
     margin: 15px auto;
     width: 97px;
-  	height: 1px;
-    background-color: rgba(255, 255, 255, 0.23)
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.23);
   }
 
   .newsletter-mob {
@@ -556,8 +537,8 @@ nav {
     .subtitle {
       margin-bottom: 15px;
       font-family: "BG medium", sans-serif;
-    	font-size: rem-calc(16px);
-    	color: rgba(255, 255, 255, 0.5);
+      font-size: rem-calc(16px);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     #mc_embed_signup {
@@ -567,7 +548,9 @@ nav {
         display: none;
       }
 
-      .mc-field-group, #mc-embedded-subscribe, .clear {
+      #mc-embedded-subscribe,
+      .clear,
+      .mc-field-group {
         display: inline-block;
         vertical-align: middle;
       }
@@ -579,13 +562,13 @@ nav {
 
       #mce-EMAIL {
         font-family: "BG medium", sans-serif;
-      	font-size: rem-calc(16px);
-      	background-color: darken($violet, 10%);
+        font-size: rem-calc(16px);
+        background-color: darken($violet, 10%);
         border: none;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         padding: 8px 18px;
         outline: none;
         width: 100%;
@@ -612,22 +595,22 @@ nav {
       }
 
       #mc-embedded-subscribe {
-  	    background-color: lighten($violet, 10%);
-  	    color: lighten($violet, 10%);
+        background-color: lighten($violet, 10%);
+        color: lighten($violet, 10%);
         font-family: "BG bold";
-      	font-size: rem-calc(12px);
+        font-size: rem-calc(12px);
         text-transform: uppercase;
         border: none;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         padding: 0 18px;
         position: relative;
         height: 42px;
         width: 47px;
         cursor: pointer;
-        transition: .2s ease;
+        transition: 0.2s ease;
         appearance: none;
 
         &:hover {
@@ -638,7 +621,6 @@ nav {
   }
 
   .social-mob {
-
     h3 {
       display: inline-block;
       vertical-align: middle;
@@ -661,8 +643,8 @@ nav {
 
         svg {
           path {
-            fill: rgba(255, 255, 255, 0.5);;
-            transition: .2s ease;
+            fill: rgba(255, 255, 255, 0.5);
+            transition: 0.2s ease;
           }
         }
 
@@ -677,7 +659,7 @@ nav {
     margin-bottom: 30px;
 
     span {
-    	color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.5);
       margin-right: 10px;
     }
 
@@ -686,7 +668,6 @@ nav {
       vertical-align: middle;
     }
   }
-
   @media screen and (min-width: 961px) {
     display: none !important;
   }

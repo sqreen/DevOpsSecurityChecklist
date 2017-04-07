@@ -17,12 +17,11 @@
     <div class="mobile-menu">
       <img src="/images/cross.svg" alt="Close the menu" class="close">
       <ul class="nav">
-        <li class="selected"><a href="#company">Your company</a></li>
-        <li><a href="#employees">Your employees</a></li>
-        <li><a href="#infrasructure">Your infrastructure</a></li>
-        <li><a href="#code">Your code</a></li>
-        <li><a href="#application">Your application</a></li>
-        <li><a href="#users">Your product users</a></li>
+        <li class="selected"><a href="#culture">Culture</a></li>
+        <li><a href="#infrastructure">Infrastructure</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#protection">Protection</a></li>
+        <li><a href="#monitoring">Monitoring</a></li>
       </ul>
       <div class="divider"></div>
       <div class="newsletter-mob">
@@ -91,12 +90,11 @@
           <img src="/images/scsc-logo.svg" alt="Saas CTO Security Checklist" class="logo">
           <nav>
             <ul>
-              <li class="active"><a href="#company">Your company</a></li>
-              <li><a href="#employees">Your employees</a></li>
-              <li><a href="#infrasructure">Your infrastructure</a></li>
-              <li><a href="#code">Your code</a></li>
-              <li><a href="#application">Your application</a></li>
-              <li><a href="#users">Your product users</a></li>
+              <li class="active"><a href="#culture">Culture</a></li>
+              <li><a href="#infrastructure">Infrastructure</a></li>
+              <li><a href="#code">Code</a></li>
+              <li><a href="#protection">Protection</a></li>
+              <li><a href="#monitoring">Monitoring</a></li>
             </ul>
           </nav>
           <div class="social">
@@ -127,16 +125,25 @@
           </div>
         </div>
         <!-- Right panel -->
-        <div class="col-9">
-          <h1>The SaaS CTO Security Checklist</h1>
-          <p class="description">This is a basic checklist that all SaaS CTOs (and anyone else) can use to harden their security. Security shouldn’t feel like a chore. Select your startup stage and use these rules to improve your security. This list is far from exhaustive, incomplete by nature since the security you need depends on your assets.<br><br>Feel free to contribute directly on GitHub!</p>
+        <div class="main-content">
+          <h1>The DevOps Security Checklist</h1>
+          <p class="description">
+            Security is increasingly becoming the responsibility of DevOps teams. Movements like DevSecOps are contributing to this change.<br>
+            This security checklist aims to give DevOps professionals a list of security best practices they can follow according to their company stage.<br>
+            DevOps teams make security decisions several times, everyday! Security is a moving target. The applicable recommendations for a Series B company will not be relevant for an early stage company.<br>
+            Select your company stage and use these rules to improve your security.<br>
+            This list is far from being exhaustive. Feel free to contribute directly on GitHub!
+          </p>
           <div class="filter-bar">
-            <h3>Company Stage</h3>
-            <ul class="selected-three">
-              <li class="seed">Seed</li>
-              <li class="seriesa">Series A</li>
-              <li class="above">Post-Series A</li>
-            </ul>
+            <h3>View</h3>
+            <div class="select-block selected-one">
+              <ul>
+                <li class="seriesa">Early stage/series A</li>
+                <li class="seriesb">Series B</li>
+                <li class="post-seriesb">Post-Series B</li>
+              </ul>
+              <div class="progress-bar"></div>
+            </div>
           </div>
           {{ content }}
         </div>
