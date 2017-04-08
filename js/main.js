@@ -7,9 +7,7 @@ $grid.isotope({
 
 // Show seed items
 $('.filter-bar .seriesa').on( 'click', function() {
-  $('.filter-bar li').removeClass('selected');
-  $('.filter-bar ul').removeClass();
-  $(this).parent().parent().addClass('selected-one');
+  $(this).parent().parent().removeClass('selected-two selected-three').addClass('selected-one');
   $grid.isotope({
     transitionDuration: 300,
     filter: ".seriesa"
@@ -17,9 +15,7 @@ $('.filter-bar .seriesa').on( 'click', function() {
 });
 // Show seriesa items
 $('.filter-bar .seriesb').on( 'click', function() {
-  $('.filter-bar li').removeClass('selected');
-  $('.filter-bar ul').removeClass();
-  $(this).parent().parent().addClass('selected-two');
+  $(this).parent().parent().removeClass('selected-one selected-three').addClass('selected-two');
   $grid.isotope({
     transitionDuration: 300,
     filter: ".seriesb, .seriesa"
@@ -27,9 +23,7 @@ $('.filter-bar .seriesb').on( 'click', function() {
 });
 // Show all item
 $('.filter-bar .post-seriesb').on( 'click', function() {
-  $('.filter-bar li').removeClass('selected');
-  $('.filter-bar ul').removeClass();
-  $(this).parent().parent().addClass('selected-three');
+  $(this).parent().parent().removeClass('selected-two selected-one').addClass('selected-three');
   $grid.isotope({
     transitionDuration: 300,
     filter: '*'

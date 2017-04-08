@@ -81,3 +81,36 @@
   font-weight: 800;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'filson-soft';
+  src:  url('../fonts/FilsonSoftBook.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FilsonSoftBook.woff') format('woff'),
+        url('../fonts/FilsonSoftBook.ttf')  format('truetype'),
+        url('../fonts/FilsonSoftBook.svg#FilsonSoftBook') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'filson-soft';
+  src:  url('../fonts/FilsonSoftMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FilsonSoftMedium.woff') format('woff'),
+        url('../fonts/FilsonSoftMedium.ttf')  format('truetype'),
+        url('../fonts/FilsonSoftMedium.svg#FilsonSoftMedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'filson-soft';
+  src:  url('../fonts/FilsonSoftRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FilsonSoftRegular.woff') format('woff'),
+        url('../fonts/FilsonSoftRegular.ttf')  format('truetype'),
+        url('../fonts/FilsonSoftRegular.svg#FilsonSoftRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
