@@ -309,23 +309,40 @@ nav {
 
         &.checked p {
           color: $grey-light;
+
+          &::after {
+            width: 100%;
+          }
         }
 
         p {
-          font-family: "BG medium", sans-serif;
-          font-size: rem-calc(21px);
-          line-height: 1;
+          font-family: "filson-soft", sans-serif;
+          font-size: rem-calc(18px);
+          font-weight: 500;
+          line-height: 1.67;
           color: $black;
           display: inline;
           transition: 0.2s ease;
-          margin-right: 5px;
+          margin-right: 14px;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 0;
+            height: 1px;
+            background-color: $grey-light;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transition: .2s ease;
+          }
         }
 
         .category {
-          font-family: "BG light", sans-serif;
+          font-family: "filson-soft", sans-serif;
           font-size: rem-calc(16px);
           font-style: italic;
-          line-height: 1.9;
+          line-height: 1.88;
           color: $grey-light;
           display: inline;
           white-space: nowrap;
@@ -348,27 +365,27 @@ nav {
 
     .body {
       background-color: $grey-lighter2;
-      padding: 31px 33px;
+      padding: 26px 29px;
       display: none;
       box-shadow: inset 0 -1px 0 $grey-lighter;
 
       p {
-        font-family: "BG regular", sans-serif;
-        font-size: rem-calc(20px);
-        line-height: 1.4;
-        color: $grey;
+        font-family: "Proxima Nova", sans-serif;
+        font-size: rem-calc(17px);
+        line-height: 1.65;
+        color: #808080;
         display: block;
         margin-bottom: 15px;
+      }
 
-        // a {
-        //   word-break: normal !important;
-        // }
+      strong {
+        font-weight: 600;
       }
 
       a {
-        font-family: "BG medium", sans-serif;
-        font-size: rem-calc(21px);
-        line-height: 1.4;
+        font-family: "Proxima Nova", sans-serif;
+        font-size: rem-calc(17px);
+        line-height: 1.65;
         color: $violet;
         text-decoration: none;
         word-break: break-word;

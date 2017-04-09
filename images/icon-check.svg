@@ -1,12 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
-    <title>065AD787-DC4B-4462-8C87-43053EBEF0AA</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="cto-security-checklist-mobile-menu" transform="translate(-274.000000, -461.000000)" stroke-width="3" stroke="#FFFFFF">
-            <polyline id="icon-check" points="277 468.752123 280.102857 471.920206 287.86 464"></polyline>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+  <path fill="none" stroke="#fc3e47" stroke-width="3" d="M3 7.75l3.1 3.17L13.86 3" stroke-linecap="square"/>
 </svg>

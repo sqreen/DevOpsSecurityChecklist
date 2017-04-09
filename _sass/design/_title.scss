@@ -17,11 +17,11 @@ h2 {
   display: block;
   margin-bottom: 20px;
   font-family: "filson-soft", sans-serif;
-  font-size: rem-calc(18px);
-  line-height: 2;
+  font-size: rem-calc(24px);
+  font-weight: 500;
   letter-spacing: 0.2px;
-  color: $violet;
-  text-transform: uppercase;
+  color: $black;
+	line-height: 1.5;
 
   @media screen and (max-width: 960px) {
     font-size: rem-calc(24px);
