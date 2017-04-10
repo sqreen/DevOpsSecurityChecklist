@@ -3,20 +3,21 @@ footer {
   margin-bottom: 100px;
 
   & > span {
-    font-size: rem-calc(15px);
-    font-weight: 600;
+    font-family: "filson-soft", sans-serif;
     font-style: normal;
     font-stretch: normal;
-    line-height: 2.57;
     color: #9a9a9a;
     text-transform: uppercase;
     margin-bottom: 12px;
     display: block;
+    font-size: rem-calc(14px);
+    font-weight: 500;
+    line-height: 2.57;
   }
 
   .gradient {
     padding: 40px;
-    background-image: linear-gradient(105deg, #c32aff, #9012fe);
+    background-image: linear-gradient(105deg, #ff5858, #f09819);
 
     .logo-ctn {
       margin-bottom: 24px;
@@ -24,7 +25,7 @@ footer {
     }
 
     h5 {
-      font-size: rem-calc(27.7px);
+      font-size: rem-calc(24px);
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
@@ -35,7 +36,8 @@ footer {
 
     .subtitle {
       display: block;
-      font-size: rem-calc(16px);
+      font-family: "Proxima Nova", sans-serif;
+      font-size: rem-calc(15px);
       font-weight: 600;
       font-style: normal;
       font-stretch: normal;
@@ -46,12 +48,15 @@ footer {
     a {
       display: inline-block;
       vertical-align: middle;
-      font-size: rem-calc(18px);
+      font-size: rem-calc(15px);
       font-weight: 600;
       font-style: normal;
       font-stretch: normal;
       color: #ffffff;
       text-decoration: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
 
       &:hover {
         span {

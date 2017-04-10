@@ -1,6 +1,6 @@
 ---
 title: Backup regularly
-stage: Serie A
+stage: Series A
 category: Infrastructure
 ---
 Your data is likely to be your business’s most precious asset. Be sure not to lose it. Implement proper backups and check for backup integrity.

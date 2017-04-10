@@ -6,7 +6,7 @@ layout: default
   <h2>Culture</h2>
   <ul class="checklist">
     {% for culture in cultures %}
-    <li class="{{ tip.stage }}">
+    <li class="{{ culture.stage | replace: " ", "-" | downcase }}">
       <div class="header">
         <div class="check">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
@@ -32,13 +32,51 @@ layout: default
   </ul>
 </div>
 
+<div class="newsletter">
+  <span>Send me the whole checklist &amp; updates!</span>
+  <form class="input-ctn">
+    <input type="email" placeholder="youremail@address.com">
+    <input type="submit" value="Subscribe">
+  </form>
+</div>
+
+{% assign codes = site.tips | where:'category', 'Code' %}
+<div class="scrollspy" id="code">
+  <h2>Code</h2>
+  <ul class="checklist">
+    {% for code in codes %}
+    <li class="{{ code.stage | replace: " ", "-" | downcase }}">
+      <div class="header">
+        <div class="check">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+              <path stroke="#fc3e47" d="M6 11.402l2.874 2.934L16.06 7"/>
+              <circle cx="11" cy="11" r="11"/>
+            </g>
+          </svg>
+        </div>
+        <div class="expend-bar">
+          <p>{{ code.title | escape }}</p>
+          <span class="category">{{ code.stage }}</span>
+        </div>
+        <div class="btn">
+          <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+        </div>
+      </div>
+      <div class="body">
+        {{ code.content }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% assign infrastructures = site.tips | where:'category', 'Infrastructure' %}
-<div class="scrollspy" id="culture">
+<div class="scrollspy" id="infrastructure">
   <h2>Infrastructure</h2>
   <ul class="checklist">
     {% for infrastructure in infrastructures %}
-    <li class="{{ tip.stage }}">
+    <li class="{{ infrastructure.stage | replace: " ", "-" | downcase }}">
       <div class="header">
         <div class="check">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
@@ -58,6 +96,68 @@ layout: default
       </div>
       <div class="body">
         {{ infrastructure.content }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% assign protections = site.tips | where:'category', 'Protection' %}
+<div class="scrollspy" id="protection">
+  <h2>Protection</h2>
+  <ul class="checklist">
+    {% for protection in protections %}
+    <li class="{{ protection.stage | replace: " ", "-" | downcase }}">
+      <div class="header">
+        <div class="check">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+              <path stroke="#fc3e47" d="M6 11.402l2.874 2.934L16.06 7"/>
+              <circle cx="11" cy="11" r="11"/>
+            </g>
+          </svg>
+        </div>
+        <div class="expend-bar">
+          <p>{{ protection.title | escape }}</p>
+          <span class="category">{{ protection.stage }}</span>
+        </div>
+        <div class="btn">
+          <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+        </div>
+      </div>
+      <div class="body">
+        {{ protection.content }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% assign monitorings = site.tips | where:'category', 'Monitoring' %}
+<div class="scrollspy" id="monitoring">
+  <h2>Monitoring</h2>
+  <ul class="checklist">
+    {% for monitoring in monitorings %}
+    <li class="{{ monitoring.stage | replace: " ", "-" | downcase }}">
+      <div class="header">
+        <div class="check">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+            <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+              <path stroke="#fc3e47" d="M6 11.402l2.874 2.934L16.06 7"/>
+              <circle cx="11" cy="11" r="11"/>
+            </g>
+          </svg>
+        </div>
+        <div class="expend-bar">
+          <p>{{ monitoring.title | escape }}</p>
+          <span class="category">{{ monitoring.stage }}</span>
+        </div>
+        <div class="btn">
+          <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+        </div>
+      </div>
+      <div class="body">
+        {{ monitoring.content }}
       </div>
     </li>
     {% endfor %}

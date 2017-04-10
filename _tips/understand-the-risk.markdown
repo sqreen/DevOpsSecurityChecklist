@@ -1,6 +1,6 @@
 ---
 title: Understand the risk
-stage: Early stage/Series A
+stage: Series A
 category: Culture
 ---
 The cost of breaches is drastically increasing and security should be taken seriously inside an organization. DevOps engineers should play an important role in advocating for better security practices

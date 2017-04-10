@@ -701,3 +701,19 @@ nav {
     display: none !important;
   }
 }
+
+.newsletter {
+  background: linear-gradient(99deg, #ff5858, #f09819);
+  text-align: center;
+  padding: 20px 0;
+
+  span {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: rem-calc(23px);
+    font-weight: 600;
+    line-height: 1.57;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+  }
+}

@@ -1,6 +1,6 @@
 ---
 title: Upgrade your servers regularly
-stage: Serie A
+stage: Series A
 category: Infrastructure
 ---
 Server packages and libraries are often updated when security vulnerabilities are found. You should update them as soon as a security vulnerability is found.

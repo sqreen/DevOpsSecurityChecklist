@@ -2,7 +2,7 @@
 //========================================
 var $grid = $('.checklist').isotope();
 $grid.isotope({
-  filter: "*"
+  filter: ".series-a"
 })
 
 // Show seed items
@@ -10,7 +10,7 @@ $('.filter-bar .seriesa').on( 'click', function() {
   $(this).parent().parent().removeClass('selected-two selected-three').addClass('selected-one');
   $grid.isotope({
     transitionDuration: 300,
-    filter: ".seriesa"
+    filter: ".series-a"
   });
 });
 // Show seriesa items
@@ -18,7 +18,7 @@ $('.filter-bar .seriesb').on( 'click', function() {
   $(this).parent().parent().removeClass('selected-one selected-three').addClass('selected-two');
   $grid.isotope({
     transitionDuration: 300,
-    filter: ".seriesb, .seriesa"
+    filter: ".series-b, .series-a"
   });
 });
 // Show all item

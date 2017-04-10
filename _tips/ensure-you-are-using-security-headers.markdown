@@ -1,6 +1,6 @@
 ---
 title: Ensure you are using security headers
-stage: Serie A
+stage: Series A
 category: Code
 ---
 Modern browsers support a set of headers dedicated to block certain types of attacks. Make sure you properly implemented all security headers. Don’t forget about the CSP.

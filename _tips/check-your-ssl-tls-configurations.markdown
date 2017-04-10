@@ -1,6 +1,6 @@
 ---
 title: Check your SSL / TLS configurations
-stage: Serie A
+stage: Series A
 category: Infrastructure
 ---
 Use free tools to scan your infrastructure regularly and make sure the SSL configurations are correct.
