@@ -14,6 +14,44 @@
   height: 100%;
   box-shadow: 1px 0 0 0 rgba(209, 209, 209, 0.5);
 
+  .progression {
+    margin-bottom: 25px;
+
+    span {
+      font-size: rem-calc(15px);
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      color: #333;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .progression-bar {
+      display: block;
+      width: 9px;
+      min-width: 1px;
+      max-width: 145px;
+      height: 9px;
+      border-radius: 100px;
+      background-image: linear-gradient(to bottom, rgba(255, 88, 88, 0.0), rgba(0, 0, 0, 0.13)), linear-gradient(#ff5858, #ff5858);
+      position: relative;
+      margin-left: 5px;
+
+      &::before {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        content: '';
+        width: 156px;
+        height: 19px;
+        border-radius: 100px;
+        background-color: #ebebeb;
+        z-index: -1;
+      }
+    }
+  }
+
   @media screen and (max-width: 960px) {
     width: 100%;
     position: relative;
@@ -44,7 +82,7 @@
 }
 
 .logo {
-  margin: 100px 0 7.5vh;
+  margin: 100px 0 25px;
 
   @media screen and (max-width: 960px) {
     width: 50px;

@@ -5,6 +5,8 @@ $grid.isotope({
   filter: ".series-a"
 })
 
+var currentStage = 'series-a';
+
 // Show seed items
 $('.filter-bar .seriesa').on( 'click', function() {
   $(this).parent().parent().removeClass('selected-two selected-three').addClass('selected-one');
@@ -12,6 +14,8 @@ $('.filter-bar .seriesa').on( 'click', function() {
     transitionDuration: 300,
     filter: ".series-a"
   });
+
+  currentStage = 'series-a';
 });
 // Show seriesa items
 $('.filter-bar .seriesb').on( 'click', function() {
@@ -20,6 +24,8 @@ $('.filter-bar .seriesb').on( 'click', function() {
     transitionDuration: 300,
     filter: ".series-b, .series-a"
   });
+
+  currentStage = 'series-b';
 });
 // Show all item
 $('.filter-bar .post-seriesb').on( 'click', function() {
@@ -28,6 +34,7 @@ $('.filter-bar .post-seriesb').on( 'click', function() {
     transitionDuration: 300,
     filter: '*'
   })
+  currentStage = 'post-series-b';
 });
 
 // Smooth scrolling
@@ -54,6 +61,8 @@ $('.check').click(function(){
     $(this).addClass('checked');
     $(this).parent().find('.expend-bar').addClass('checked');
   }
+
+  countCheck(currentStage);
 });
 
 // Expend/collapse
@@ -114,3 +123,15 @@ $('.scrollspy').on('scrollSpy:exit', function() {
 });
 $('.scrollspy').scrollSpy();
 // $.winSizeSpy().on('scrollSpy:winSize', funcy);
+
+var checkedItems = 0;
+var items = 0;
+
+function countCheck (stage) {
+  items = $('.'+stage+' .check').length;
+  checkedItems = $('.'+stage+' .check.checked').length;
+  var progressBar = Math.round((checkedItems * 100) / items);
+  $('.progression span').text('Progress: '+progressBar+'%')
+  console.log('items', items);
+  console.log('checkedItems', checkedItems);
+}
