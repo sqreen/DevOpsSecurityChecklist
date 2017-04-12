@@ -32,6 +32,7 @@
       display: block;
       width: 156px;
       height: 19px;
+      padding: 0 5px;
       border-radius: 100px;
       background-color: #ebebeb;
 
@@ -41,10 +42,10 @@
         min-width: 1px;
         width: 1px;
         height: 9px;
+        // max-width: calc(100% - 11px);
         border-radius: 100px;
         background-image: linear-gradient(to bottom, rgba(255, 88, 88, 0.0), rgba(0, 0, 0, 0.13)), linear-gradient(#ff5858, #ff5858);
         position: relative;
-        margin-left: 5px;
         transition: .2s ease;
       }
     }
@@ -301,6 +302,7 @@ nav {
 
   li {
     display: inline-block;
+    vertical-align: middle;
     margin-right: 20px;
 
     a {
@@ -325,7 +327,9 @@ nav {
 
 .checklist {
   margin-bottom: 50px;
-  border: solid 1px $grey-lighter;
+  border-top: solid 1px $grey-lighter;
+  border-left: solid 1px $grey-lighter;
+  border-right: solid 1px $grey-lighter;
 
   li {
     width: 100%;
@@ -629,8 +633,9 @@ nav {
         border-bottom-right-radius: 0;
         padding: 8px 18px;
         outline: none;
-        width: 100%;
+        width: calc(100% - 90px);
         display: inline-block;
+        vertical-align: middle;
         height: 42px;
         color: $white;
 
@@ -746,7 +751,7 @@ nav {
   }
 }
 
-.newsletter {
+.newsletter-middle {
   background: linear-gradient(99deg, #ff5858, #f09819);
   text-align: center;
   padding: 20px 0;
@@ -763,15 +768,75 @@ nav {
   }
 
   #mc_embed_signup {
+    .email {
+      max-width: 244px;
+      width: 100%;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      background-color: #ffffff;
+      border: none;
+      appearance: none;
+      font-family: 'Proxima Nova', sans-serif;
+      font-size: rem-calc(16px);
+      padding: 14px 18px;
+      display: inline-block;
+      vertical-align: middle;
+      outline: none;
+    }
+
+    .button {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      background-color: #383838;
+      font-family: 'filson-soft', sans-serif;
+      font-size: rem-calc(12px);
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      padding: 14px 18px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: .2s ease;
+
+      &:hover {
+        background-color: lighten(#383838, 3%);
+      }
+    }
+
+    .clear {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      left: -4px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+.newsletter {
+  margin-bottom: 30px;
+
+  .subtitle {
+    font-family: "filson-soft", sans-serif;
+  	font-size: rem-calc(16px);
+  	line-height: 2;
+  	color: $grey-light;
+    margin-bottom: 10px;
+  }
+
+  #mc_embed_signup {
     font-size: 0;
 
     label {
       display: none;
     }
 
-    #mc-embedded-subscribe,
-    .clear,
-    .mc-field-group {
+    .mc-field-group, #mc-embedded-subscribe, .clear {
       display: inline-block;
       vertical-align: middle;
     }
@@ -782,24 +847,25 @@ nav {
     }
 
     #mce-EMAIL {
-      font-family: "BG medium", sans-serif;
-      font-size: rem-calc(16px);
-      background-color: $grey-lighter;
+      font-family: "filson-soft", sans-serif;
+    	font-size: rem-calc(16px);
+    	background-color: $grey-lighter;
       border: none;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
       padding: 8px 18px;
       outline: none;
-      width: 100%;
       display: inline-block;
+      vertical-align: middle;
       height: 39px;
     }
 
     #mc-embedded-subscribe {
-      background-color: $violet;
-      font-family: "BG bold";
-      font-size: rem-calc(12px);
-      color: $white;
+	    background-color: $violet;
+      font-family: "filson-soft", sans-serif;
+      font-weight: 500;
+    	font-size: rem-calc(12px);
+    	color: $white;
       text-transform: uppercase;
       border: none;
       border-top-right-radius: 4px;
@@ -808,13 +874,14 @@ nav {
       position: relative;
       height: 39px;
       cursor: pointer;
-      transition: 0.2s ease;
+      transition: .2s ease;
 
       &:hover {
         background-color: lighten($violet, 5%);
       }
     }
   }
+
   @media screen and (max-width: 960px) {
     display: none;
   }
