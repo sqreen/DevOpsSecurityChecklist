@@ -1,6 +1,6 @@
 ---
 title: Encrypt all the things
-stage: Post Serie B
+stage: Post Series B
 category: Infrastructure
 ---
 SSL performance problems are a myth and you don’t have any good reasons not to use SSL on all your public services.

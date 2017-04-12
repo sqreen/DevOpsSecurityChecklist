@@ -1,6 +1,6 @@
 ---
 title: Store encrypted passwords in your configuration management
-stage: Serie B
+stage: Series B
 category: Infrastructure
 ---
 Storing passwords (like databases ones) can be done on a dedicated database with restricted access. An other solution is to store them encrypted in your Source Code Management (SCM) system. That way, you just need the master key to decrypt them.
