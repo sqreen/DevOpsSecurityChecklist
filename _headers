@@ -1,0 +1,6 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+  Content-Security-Policy-Report-Only: script-src 'self'; img-src 'self'; object-src 'self'; manifest-src 'self'; default-src 'self'; frame-src 'self'; worker-src 'self'; style-src 'self'; connect-src 'self'; child-src 'self'; media-src 'self'; font-src 'self'; report-uri https://reports-api.sqreen.io/browser/v0/csp-violations/d80aca36-0932-44c5-8e10-3dc4e06052ec
