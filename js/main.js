@@ -1,11 +1,14 @@
 // Isotope filtering
 //========================================
 var $grid = $('.checklist').isotope();
-$grid.isotope({
-  filter: ".series-a"
-})
+setTimeout(function(){
+  $grid.isotope({
+    transitionDuration: 0,
+    filter: ".series-b, .series-a"
+  });
+}, 0);
 
-var currentStage = '';
+var currentStage = 'series-b';
 var currentClickId = '';
 var liChecked = [];
 var hash = '';
@@ -212,8 +215,8 @@ function changeHash() {
 function populateWithHash() {
   var hasFilter = location.hash.match( /[a-zA-Z]+/i );
   if ( hasFilter === null ) {
-    $('.select-block').addClass('selected-one');
-    currentStage = 'series-a';
+    $('.select-block').addClass('selected-two');
+    currentStage = 'series-b';
     return;
   }
   else {
