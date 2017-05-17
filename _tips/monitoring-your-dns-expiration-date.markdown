@@ -1,5 +1,5 @@
 ---
-title: Monitor your DNS expiration data
+title: Monitor your DNS expiration date
 stage: Series A
 category: Monitoring
 ---
