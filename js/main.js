@@ -4,11 +4,11 @@ var $grid = $('.checklist').isotope();
 setTimeout(function(){
   $grid.isotope({
     transitionDuration: 0,
-    filter: ".series-b, .series-a"
+    filter: ".series-b, .series-a, .post-series-b"
   });
 }, 0);
 
-var currentStage = 'series-b';
+var currentStage = 'post-series-b';
 var currentClickId = '';
 var liChecked = [];
 var hash = '';
@@ -123,7 +123,7 @@ $('.close, .mobile-menu .nav a').click(function(){
 $('.social a, .social-mob a').click(function(e){
   e.preventDefault();
   function mypopup(link) {
-    mywindow = window.open(link, "Share it!", "location=1,status=1,scrollbars=1,  width=900,height=700");
+    mywindow = window.open(link, "Share it!", "location=1,status=1,scrollbars=1,width=900,height=700");
     mywindow.moveTo(window.innerWidth/4, 100);
   }
   mypopup($(this).attr('href'));
@@ -215,8 +215,8 @@ function changeHash() {
 function populateWithHash() {
   var hasFilter = location.hash.match( /[a-zA-Z]+/i );
   if ( hasFilter === null ) {
-    $('.select-block').addClass('selected-two');
-    currentStage = 'series-b';
+    $('.select-block').addClass('selected-three');
+    currentStage = 'post-series-b';
     return;
   }
   else {
