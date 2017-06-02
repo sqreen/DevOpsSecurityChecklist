@@ -10,4 +10,4 @@ DevOps teams make security decisions several times, everyday! Security is a movi
 Select your company stage and use these rules to improve your security.
 This list is far from being exhaustive. Feel free to contribute!
 
-Please take a look at the [contribution guidelines](https://github.com/sqreen/CTOSecurityChecklist/blob/master/CONTRIBUTING.md) before contributing.
+Please take a look at the [contribution guidelines](https://github.com/sqreen/DevOpsSecurityChecklist/blob/master/CONTRIBUTING.md) before contributing.
