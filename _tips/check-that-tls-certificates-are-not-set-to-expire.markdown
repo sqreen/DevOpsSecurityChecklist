@@ -1,5 +1,5 @@
 ---
-title: Check that TLS certificates are not set to expire
+title: Renew your certificates on time
 stage: Series A
 category: Monitoring
 ---
