@@ -1,9 +1,9 @@
 ---
 title: Enforce Two-factor authentication (2FA)
-stage: Post Series B
+stage: Series A
 category: Protection
 ---
-Enforce 2FA on all the services used (whenever possible).
+Enforce 2FA on all the services used, for example AWS, Github, Email.
 
 [https://duo.com/](https://duo.com/)
 

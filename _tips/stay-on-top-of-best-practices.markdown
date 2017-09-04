@@ -1,12 +1,12 @@
 ---
-title:  Stay on top of best practices
+title:  Network Segmentations
 stage: Series A
-category: Culture
+category: Infrastructure
 ---
-DevOps is an ever-changing landscape. Ensure that you stay up to date in terms of new technologies, vulnerabilities or best practices.
+Network segmentation is very important to minimize the attack surface and control the damage of potential individual's laptop get compromised.
 
-[https://aws.amazon.com/whitepapers/architecting-for-the-aws-cloud-best-practices/](https://aws.amazon.com/whitepapers/architecting-for-the-aws-cloud-best-practices/)
+[hhttps://blog.algosec.com/2015/01/best-practices-tips-network-segmentation-use-cases-professor-wool.html](https://blog.algosec.com/2015/01/best-practices-tips-network-segmentation-use-cases-professor-wool.html)
 
-[https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices](https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices)
+[https://blog.rackspace.com/network-segregation-aws-2](https://blog.rackspace.com/network-segregation-aws-2)
 
 [http://webopsweekly.com/](http://webopsweekly.com/)
