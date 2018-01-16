@@ -34,19 +34,26 @@ layout: default
 
 <div class="newsletter-middle">
   <span>Send me the whole checklist &amp; updates!</span>
-  <div id="mc_embed_signup">
-    <form action="//sqreen.us13.list-manage.com/subscribe/post?u=4c3491573cfb8d053d6b76c6a&amp;id=dc011cd36a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_4c3491573cfb8d053d6b76c6a_dc011cd36a" tabindex="-1" value="">
-        </div>
-        <div class="clear">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </div>
-      </div>
-    </form>
-  </div>
+  <form class="contact-form" action="https://www.getdrip.com/forms/776829025/submissions" method="post" data-drip-embedded-form="776829025">
+    <input type="hidden" name="fields[segmentId]" data-fields="segmentId">
+    <input type="hidden" name="fields[sqreenUserId]" data-fields="sqreenUserId">
+    <input type="hidden" name="fields[source]" value="The DevOps Security Checklist">
+    <input type="hidden" name="fields[medium]" value="Resources">
+    <input type="hidden" name="fields[resource_link]" value="https://s3-eu-west-1.amazonaws.com/sqreen-assets/whitepapers/devops-security-checklist.pdf">
+    <fieldset>
+      <input type="email" name="fields[email]" placeholder="Email address" required>
+      <input type="text" name="fields[name]" placeholder="Name" required>
+      <input type="text" name="fields[company]" placeholder="Company" required>
+      <label>
+        <input type="checkbox" name="fields[checkbox]" value="I want a demo">
+        <span>I want to learn more about Sqreen</span>
+      </label>
+    </fieldset>
+    <span class="text"></span>
+    <button class="submit-button" name="submit" data-drip-attribute="sign-up-button">
+      Submit
+    </button>
+  </form>
 </div>
 
 {% assign codes = site.tips | where:'category', 'Code' %}

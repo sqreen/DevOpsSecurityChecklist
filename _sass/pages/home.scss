@@ -757,7 +757,7 @@ nav {
   padding: 20px 0;
   margin-bottom: 30px;
 
-  span {
+  > span {
     font-family: "Proxima Nova", sans-serif;
     font-size: rem-calc(23px);
     font-weight: 600;
@@ -767,26 +767,43 @@ nav {
     margin-bottom: 10px;
   }
 
-  #mc_embed_signup {
-    .email {
-      max-width: 244px;
+  .contact-form {
+    fieldset > input {
+      max-width: 250px;
       width: 100%;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-radius: 4px;
       background-color: #ffffff;
       border: none;
-      appearance: none;
       font-family: 'Proxima Nova', sans-serif;
       font-size: rem-calc(16px);
       padding: 14px 18px;
-      display: inline-block;
-      vertical-align: middle;
+      display: block;
+      margin: 0 auto 10px;
       outline: none;
     }
 
-    .button {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+    label {
+      max-width: 250px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      margin: 0 auto 10px;
+
+      input {
+        flex: none;
+      }
+
+      span {
+        flex-grow: 1;
+        text-align: left;
+        font-size: rem-calc(13px);
+      }
+    }
+
+    .submit-button {
+      border-radius: 4px;
       background-color: #383838;
       font-family: 'filson-soft', sans-serif;
       font-size: rem-calc(12px);
@@ -829,38 +846,40 @@ nav {
     margin-bottom: 10px;
   }
 
-  #mc_embed_signup {
-    font-size: 0;
-
-    label {
-      display: none;
-    }
-
-    .mc-field-group, #mc-embedded-subscribe, .clear {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    .mc-field-group {
-      width: calc(100% - 64px);
-      max-width: 244px;
-    }
-
-    #mce-EMAIL {
+  .contact-form {
+    fieldset > input {
       font-family: "filson-soft", sans-serif;
     	font-size: rem-calc(16px);
     	background-color: $grey-lighter;
       border: none;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-radius: 4px;
       padding: 8px 18px;
       outline: none;
-      display: inline-block;
-      vertical-align: middle;
-      height: 39px;
+      display: block;
+      margin-bottom: 10px;
     }
 
-    #mc-embedded-subscribe {
+    label {
+      max-width: 300px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 10px;
+
+      input {
+        flex: none;
+      }
+
+      span {
+        flex-grow: 1;
+        text-align: left;
+        font-size: rem-calc(13px);
+      }
+    }
+
+    .submit-button {
 	    background-color: $violet;
       font-family: "filson-soft", sans-serif;
       font-weight: 500;
@@ -868,18 +887,16 @@ nav {
     	color: $white;
       text-transform: uppercase;
       border: none;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      padding: 0 18px;
+      border-radius: 4px;
+      padding: 10px 18px;
       position: relative;
-      height: 39px;
       cursor: pointer;
       transition: .2s ease;
 
       &:hover {
         background-color: lighten($violet, 5%);
       }
-    }
+    }  
   }
 
   @media screen and (max-width: 960px) {
